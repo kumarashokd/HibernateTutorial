@@ -1,7 +1,7 @@
 package com.lexmark.training.dao;
 
 import com.lexmark.training.utils.HibernateUtil;
-import com.lexmark.training.entiry.Employee;
+import com.lexmark.training.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -42,7 +42,6 @@ public class EmployeeDao {
     public void delete(Employee employee) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             session.remove(employee);
-            return;
         }
     }
 }

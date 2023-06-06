@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+<persistence-unit name="my-test-hibernate">
+    <description>Hibernate Training</description>
+    <class>com.lexmark.training.entity.Employee</class>
+    <class>com.lexmark.training.entity.inheritance.Printer</class>
+    <class>com.lexmark.training.entity.inheritance.MojaPrinter</class>
+    <class>com.lexmark.training.entity.inheritance.HSPrinter</class>
+    <class>com.lexmark.training.entity.inheritance.WCPrinter</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+        <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/testing"/>
+        <property name="javax.persistence.jdbc.user" value="postgres"/>
+        <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+        <property name="javax.persistence.jdbc.password" value="Lex#India1"/>
+        <property name="hibernate.show_sql" value="true"/>
+        <property name="hibernate.format_sql" value="true"/>
+        <property name="javax.persistence.schema-generation.database.action" value="create-drop"/>
+    </properties>
+</persistence-unit>
+</persistence>

@@ -1,4 +1,4 @@
-package com.lexmark.training.entiry;
+package com.lexmark.training.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Version;
 
 @Entity
 @Table(name = "employee")
@@ -21,6 +22,8 @@ public class Employee {
     @Column(name = "salary", nullable = false)
     private int salary;
 
+    @Version
+    long version;
 
     public Employee() {
     }

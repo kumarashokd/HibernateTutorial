@@ -1,6 +1,6 @@
 package com.lexmark.training.utils;
 
-import com.lexmark.training.entiry.Employee;
+import com.lexmark.training.entity.Employee;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
